@@ -1,32 +1,12 @@
-import { createFileRoute } from "@tanstack/react-router";
 import logo from "@/assets/spendzone-logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 import crystal from "@/assets/crystal.png";
 import dashCard from "@/assets/dashboard-card.png";
 import { Shield, Lock, TrendingUp, Eye, Sparkles, Cpu, Download, Star, ArrowRight } from "lucide-react";
 
-export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      { title: "SpendZone — Privacy-Focused Finance Intelligence" },
-      { name: "description", content: "Premium, private, intelligent personal finance. Track every rupee with luxury-grade security and on-device privacy." },
-      { property: "og:title", content: "SpendZone — Privacy-Focused Finance Intelligence" },
-      { property: "og:description", content: "Premium, private, intelligent personal finance. Track every rupee with luxury-grade security." },
-    ],
-  }),
-  component: Index,
-});
-
-function Index() {
+export default function App() {
   return (
     <div className="relative min-h-screen overflow-x-hidden text-foreground">
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-      <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-      />
-
       <Nav />
       <Hero />
       <TrustStrip />
