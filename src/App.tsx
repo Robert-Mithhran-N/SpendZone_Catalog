@@ -2,7 +2,17 @@ import logo from "@/assets/spendzone-logo.png";
 import heroBg from "@/assets/hero-bg.jpg";
 import crystal from "@/assets/crystal.png";
 import dashCard from "@/assets/dashboard-card.png";
-import { Shield, Lock, TrendingUp, Eye, Sparkles, Cpu, Download, Star, ArrowRight } from "lucide-react";
+import {
+  Shield,
+  Lock,
+  TrendingUp,
+  Eye,
+  Sparkles,
+  Cpu,
+  Download,
+  Star,
+  ArrowRight,
+} from "lucide-react";
 
 export default function App() {
   return (
@@ -23,15 +33,25 @@ function Nav() {
     <header className="fixed top-0 z-50 w-full">
       <div className="mx-auto mt-4 flex max-w-6xl items-center justify-between rounded-full border border-[oklch(0.82_0.14_88/0.18)] bg-[oklch(0.14_0.05_295/0.6)] px-5 py-3 backdrop-blur-xl">
         <a href="#top" className="flex items-center gap-3">
-          <img src={logo} alt="SpendZone" className="h-9 w-9 rounded-lg object-cover ring-1 ring-accent/30" />
+          <img
+            src={logo}
+            alt="SpendZone"
+            className="h-9 w-9 rounded-lg object-cover ring-1 ring-accent/30"
+          />
           <span className="text-lg font-semibold tracking-tight">
             Spend<span className="text-gold-gradient">Zone</span>
           </span>
         </a>
         <nav className="hidden items-center gap-8 text-sm text-muted-foreground md:flex">
-          <a href="#features" className="transition-colors hover:text-foreground">Features</a>
-          <a href="#intelligence" className="transition-colors hover:text-foreground">Intelligence</a>
-          <a href="#download" className="transition-colors hover:text-foreground">Download</a>
+          <a href="#features" className="transition-colors hover:text-foreground">
+            Features
+          </a>
+          <a href="#intelligence" className="transition-colors hover:text-foreground">
+            Intelligence
+          </a>
+          <a href="#download" className="transition-colors hover:text-foreground">
+            Download
+          </a>
         </nav>
         <a href="#download" className="gold-button rounded-full px-5 py-2 text-sm font-semibold">
           Get App
@@ -43,10 +63,19 @@ function Nav() {
 
 function Hero() {
   return (
-    <section id="top" className="relative isolate flex min-h-screen items-center justify-center px-6 pt-32 pb-20">
+    <section
+      id="top"
+      className="relative isolate flex min-h-screen items-center justify-center px-6 pt-32 pb-20"
+    >
       {/* Cinematic background */}
       <div className="absolute inset-0 -z-10">
-        <img src={heroBg} alt="" className="h-full w-full object-cover opacity-70" width={1920} height={1080} />
+        <img
+          src={heroBg}
+          alt=""
+          className="h-full w-full object-cover opacity-70"
+          width={1920}
+          height={1080}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/40 to-background" />
       </div>
 
@@ -78,22 +107,34 @@ function Hero() {
             <span className="text-gold-gradient italic">Privately Yours.</span>
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-base text-muted-foreground md:text-lg lg:mx-0">
-            SpendZone turns every transaction into clarity — silently, securely, and entirely on your device.
-            Built for those who treat their money with intention.
+            SpendZone turns every transaction into clarity — silently, securely, and entirely on
+            your device. Built for those who treat their money with intention.
           </p>
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row lg:items-start lg:justify-start">
-            <a href="#download" className="gold-button inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold">
+            <a
+              href="#download"
+              className="gold-button inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold"
+            >
               <Download className="h-4 w-4" /> Download APK
             </a>
-            <a href="#features" className="inline-flex items-center gap-2 rounded-full border border-accent/30 px-7 py-3.5 text-sm font-medium text-foreground/90 backdrop-blur transition-all hover:border-accent/60 hover:bg-[oklch(0.82_0.14_88/0.06)]">
+            <a
+              href="#features"
+              className="inline-flex items-center gap-2 rounded-full border border-accent/30 px-7 py-3.5 text-sm font-medium text-foreground/90 backdrop-blur transition-all hover:border-accent/60 hover:bg-[oklch(0.82_0.14_88/0.06)]"
+            >
               Explore the Experience <ArrowRight className="h-4 w-4" />
             </a>
           </div>
 
           <div className="mt-12 flex items-center justify-center gap-8 text-xs uppercase tracking-[0.25em] text-muted-foreground lg:justify-start">
-            <div className="flex items-center gap-2"><Lock className="h-3.5 w-3.5 text-accent" /> On-device</div>
-            <div className="flex items-center gap-2"><Shield className="h-3.5 w-3.5 text-accent" /> Zero-knowledge</div>
-            <div className="flex items-center gap-2"><Cpu className="h-3.5 w-3.5 text-accent" /> AI Native</div>
+            <div className="flex items-center gap-2">
+              <Lock className="h-3.5 w-3.5 text-accent" /> On-device
+            </div>
+            <div className="flex items-center gap-2">
+              <Shield className="h-3.5 w-3.5 text-accent" /> Zero-knowledge
+            </div>
+            <div className="flex items-center gap-2">
+              <Cpu className="h-3.5 w-3.5 text-accent" /> AI Native
+            </div>
           </div>
         </div>
 
@@ -116,12 +157,21 @@ function Hero() {
 }
 
 function TrustStrip() {
-  const items = ["256-bit Encryption", "On-Device AI", "No Cloud Sync", "RBI-Aligned", "Indian Rupee Native"];
+  const items = [
+    "256-bit Encryption",
+    "On-Device AI",
+    "No Cloud Sync",
+    "RBI-Aligned",
+    "Indian Rupee Native",
+  ];
   return (
     <section className="border-y border-accent/10 bg-[oklch(0.13_0.05_295/0.6)] py-6 backdrop-blur">
       <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-12 gap-y-3 px-6 text-xs uppercase tracking-[0.3em] text-muted-foreground">
         {items.map((i) => (
-          <span key={i} className="flex items-center gap-2"><span className="h-1 w-1 rounded-full bg-accent" />{i}</span>
+          <span key={i} className="flex items-center gap-2">
+            <span className="h-1 w-1 rounded-full bg-accent" />
+            {i}
+          </span>
         ))}
       </div>
     </section>
@@ -130,12 +180,36 @@ function TrustStrip() {
 
 function Features() {
   const features = [
-    { icon: Shield, title: "Vault-Grade Privacy", body: "Your financial DNA never leaves your device. Encrypted, sandboxed, and invisible to the cloud." },
-    { icon: TrendingUp, title: "Predictive Intelligence", body: "On-device models forecast spend, surface anomalies, and quietly guide every rupee." },
-    { icon: Eye, title: "Silent SMS Reading", body: "Detect transactions in milliseconds from bank SMS — no APIs, no exposure, no permissions abuse." },
-    { icon: Lock, title: "Biometric Lockdown", body: "Multi-layer biometric access with secure enclave key storage and zero-knowledge sessions." },
-    { icon: Cpu, title: "AI-Crafted Insights", body: "Personal financial insights that read like a private advisor — not a generic dashboard." },
-    { icon: Sparkles, title: "Luxury Experience", body: "Every pixel tuned for clarity. Built like a private wealth product, priced for everyone." },
+    {
+      icon: Shield,
+      title: "Vault-Grade Privacy",
+      body: "Your financial DNA never leaves your device. Encrypted, sandboxed, and invisible to the cloud.",
+    },
+    {
+      icon: TrendingUp,
+      title: "Predictive Intelligence",
+      body: "On-device models forecast spend, surface anomalies, and quietly guide every rupee.",
+    },
+    {
+      icon: Eye,
+      title: "Silent SMS Reading",
+      body: "Detect transactions in milliseconds from bank SMS — no APIs, no exposure, no permissions abuse.",
+    },
+    {
+      icon: Lock,
+      title: "Biometric Lockdown",
+      body: "Multi-layer biometric access with secure enclave key storage and zero-knowledge sessions.",
+    },
+    {
+      icon: Cpu,
+      title: "AI-Crafted Insights",
+      body: "Personal financial insights that read like a private advisor — not a generic dashboard.",
+    },
+    {
+      icon: Sparkles,
+      title: "Luxury Experience",
+      body: "Every pixel tuned for clarity. Built like a private wealth product, priced for everyone.",
+    },
   ];
   return (
     <section id="features" className="relative px-6 py-32">
@@ -146,7 +220,8 @@ function Features() {
             Engineered like a <span className="text-gold-gradient italic">private vault.</span>
           </h2>
           <p className="mt-6 text-muted-foreground">
-            Six foundational pillars. Each one obsessively designed to protect, predict, and elevate how you experience money.
+            Six foundational pillars. Each one obsessively designed to protect, predict, and elevate
+            how you experience money.
           </p>
         </div>
 
@@ -197,14 +272,22 @@ function Intelligence() {
                       <span className="text-foreground/80">{r.amount}</span>
                     </div>
                     <div className="h-1.5 overflow-hidden rounded-full bg-[oklch(0.25_0.08_295)]">
-                      <div className="h-full rounded-full" style={{ width: `${r.val}%`, background: "var(--gradient-gold)" }} />
+                      <div
+                        className="h-full rounded-full"
+                        style={{ width: `${r.val}%`, background: "var(--gradient-gold)" }}
+                      />
                     </div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-          <img src={crystal} alt="" loading="lazy" className="pointer-events-none absolute -right-16 -top-12 w-40 animate-float-slow opacity-80" />
+          <img
+            src={crystal}
+            alt=""
+            loading="lazy"
+            className="pointer-events-none absolute -right-16 -top-12 w-40 animate-float-slow opacity-80"
+          />
         </div>
 
         <div className="order-1 lg:order-2">
@@ -213,7 +296,8 @@ function Intelligence() {
             Every rupee, <span className="text-gold-gradient italic">understood.</span>
           </h2>
           <p className="mt-6 text-muted-foreground">
-            SpendZone watches silently — parsing your bank's SMS into structured intelligence. No bank logins. No screen scraping. Just elegant clarity, on-device, in real time.
+            SpendZone watches silently — parsing your bank's SMS into structured intelligence. No
+            bank logins. No screen scraping. Just elegant clarity, on-device, in real time.
           </p>
           <ul className="mt-8 space-y-4">
             {[
@@ -255,11 +339,12 @@ function DownloadCTA() {
           <br /> in your pocket.
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-muted-foreground">
-          Install SpendZone in under 30 seconds. No sign-up. No syncing. No surveillance. Just the most considered finance experience ever shipped on Android.
+          Install SpendZone in under 30 seconds. No sign-up. No syncing. No surveillance. Just the
+          most considered finance experience ever shipped on Android.
         </p>
 
         <a
-          href="#"
+          href="https://github.com/Robert-Mithhran-N/SpendZone/releases/download/v1.0.0/SpendZone-v1.0.0.apk"
           className="gold-button group relative mt-12 inline-flex items-center gap-3 rounded-full px-10 py-5 text-base font-semibold"
         >
           <Download className="h-5 w-5" />
@@ -268,9 +353,15 @@ function DownloadCTA() {
         </a>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
-          <span className="flex items-center gap-2"><Shield className="h-3.5 w-3.5 text-accent" /> Signed Build</span>
-          <span className="flex items-center gap-2"><Lock className="h-3.5 w-3.5 text-accent" /> Play Protect Verified</span>
-          <span className="flex items-center gap-2"><Sparkles className="h-3.5 w-3.5 text-accent" /> 4.9 / 5 Early Users</span>
+          <span className="flex items-center gap-2">
+            <Shield className="h-3.5 w-3.5 text-accent" /> Signed Build
+          </span>
+          <span className="flex items-center gap-2">
+            <Lock className="h-3.5 w-3.5 text-accent" /> Play Protect Verified
+          </span>
+          <span className="flex items-center gap-2">
+            <Sparkles className="h-3.5 w-3.5 text-accent" /> 4.9 / 5 Early Users
+          </span>
         </div>
       </div>
     </section>
@@ -282,9 +373,15 @@ function Footer() {
     <footer className="border-t border-accent/10 px-6 py-12">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 md:flex-row">
         <div className="flex items-center gap-3">
-          <img src={logo} alt="" className="h-9 w-9 rounded-lg object-cover ring-1 ring-accent/30" />
+          <img
+            src={logo}
+            alt=""
+            className="h-9 w-9 rounded-lg object-cover ring-1 ring-accent/30"
+          />
           <div>
-            <div className="text-sm font-semibold">Spend<span className="text-gold-gradient">Zone</span></div>
+            <div className="text-sm font-semibold">
+              Spend<span className="text-gold-gradient">Zone</span>
+            </div>
             <div className="text-xs text-muted-foreground">Privacy-Focused Finance Tracker</div>
           </div>
         </div>
