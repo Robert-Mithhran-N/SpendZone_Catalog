@@ -13,10 +13,12 @@ import {
   Star,
   ArrowRight,
 } from "lucide-react";
+import CursorTrail from "@/components/CursorTrail";
 
 export default function App() {
   return (
     <div className="relative min-h-screen overflow-x-hidden text-foreground">
+      <CursorTrail />
       <Nav />
       <Hero />
       <TrustStrip />
